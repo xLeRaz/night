@@ -7,7 +7,7 @@ const night = new Discord.Client({disableEveryone: true, maxMessagesCache: 1});
 
 night.on('ready',async () => {
   console.log(`.Servers: ${night.guilds.size}`);
-  if(night.guild.size === 0) return night.generateInvite(['ADMINISTRATOR']).then(i => console.log(i));
+  night.generateInvite(['ADMINISTRATOR']).then(i => console.log(i));
 });
 
 
