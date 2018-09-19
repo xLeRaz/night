@@ -32,9 +32,9 @@ night.on('message',async (message) => {
 
     let embed = new Discord.RichEmbed()
     .setTitle(`**${night.user.username}** is a **multifunction** bot which helps you to **moderate** and **have some fun** in your server`)
-    .addField('Info:', `${dev} **Developer:** \`${night.users.find(owner => owner === '475396751549792277').tag}\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`${night.users.find(owner => owner === '475396751549792277').tag}\`` ,true)
+    .addField('Info:', `${dev} **Developer:** \`- iAmYouseFx'₁₁#0001\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`- iAmYouseFx'₁₁#0001\`` ,true)
     .addField('Stats:', `${servers} **Servers:** \`${night.guilds.size}\`\n${users} **Users:** \`${night.users.size}\`\n${channels} **Channels:** \`${night.channels.size}\`\n${commands} **Commands:** \`4\`` ,true)
-    .setFooter(`${night.users.find(owner => owner === '475396751549792277').tag}`, night.users.find(owner => owner.id === '475396751549792277').avatarURL);
+    .setFooter(`- iAmYouseFx'₁₁#0001`, night.users.find(owner => owner.id === '475396751549792277').avatarURL);
 
     message.channel.send(embed);
   } else if(args[0] === `${prefix}id`) {
