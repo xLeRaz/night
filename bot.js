@@ -10,5 +10,31 @@ night.on('ready',async () => {
   night.generateInvite(['ADMINISTRATOR']).then(i => console.log(i));
 });
 
+night.on('message',async (message) => {
+  if(message.author.bot) return;
+  if(message.channel.type === 'dm') return;
+  let mention = message.mentions.users.first() || message.author;
+  let args = message.content.split(' ');
+  let author = message.author;
+  if(args[0] === `${prefix}` && !args[1]) {
+    let dev = night.emojis.find(r => r.name === 'Developer');
+    let website = night.emojis.find(r => r.name === 'Website');
+    let avatar = night.emojis.find(r => r.name === 'Avatar');
+    let discord = night.emojis.find(r => r.name === 'Discord');
+
+    let servers = night.emojis.find(r => r.name === 'Servers');
+    let users = night.emojis.find(r => r.name === 'Users');
+    let channels = night.emojis.find(r => r.name === 'Channels');
+    let commands = night.emojis.find(r => r.name === 'Commands');
+
+    let embed = new Discord.RichEmbed()
+    .setTitle(` \`نايت بوت\`. هو بوت يساعدك على ادارة سيرفرك`)
+    .addField('Info:', `${dev} **Developer:** \`xYouseeF'₁₁ || Roýale.#0001\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`xYouseeF'₁₁ || Roýale.#0001\`` ,true)
+    .addField('Stats:', `${servers} **Servers:** \`${night.guilds.size}\`\n${users} **Users:** \`${night.users.size}\`\n${channels} **Channels:** \`${night.channels.size}\`\n${commands} **Commands:** \`4\`` ,true)
+    .setFooter('Made By: xYouseeF\'₁₁ || Roýale.#0001');
+
+    message.channel.send(embed);
+  }
+});
 
 night.login(process.env.NIGHT);
