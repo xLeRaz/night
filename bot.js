@@ -28,10 +28,10 @@ night.on('message',async (message) => {
     let commands = night.emojis.find(r => r.name === 'Commands');
 
     let embed = new Discord.RichEmbed()
-    .setTitle(` \`نايت بوت\`. هو بوت يساعدك على ادارة سيرفرك`)
-    .addField('Info:', `${dev} **Developer:** \`xYouseeF'₁₁ || Roýale.#0001\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`${night.users.find(owner => owner.id === '475396751549792277').tag}\`` ,true)
+    .setTitle(`**${night.user.username}** is a **multifunction** bot which helps you to **moderate** and **have some fun** in your server`)
+    .addField('Info:', `${dev} **Developer:** \`${night.users.find(owner => owner.id === '475396751549792277').tag}\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`${night.users.find(owner => owner.id === '475396751549792277').tag}\`` ,true)
     .addField('Stats:', `${servers} **Servers:** \`${night.guilds.size}\`\n${users} **Users:** \`${night.users.size}\`\n${channels} **Channels:** \`${night.channels.size}\`\n${commands} **Commands:** \`4\`` ,true)
-    .setFooter('Made By: xYouseeF\'₁₁ || Roýale.#0001');
+    .setFooter(`${night.users.find(owner => owner.id === '475396751549792277').tag}`, night.users.find(owner => owner.id === '475396751549792277').avatarURL);
 
     message.channel.send(embed);
   }
