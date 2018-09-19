@@ -13,19 +13,22 @@ night.on('ready',async () => {
 night.on('message',async (message) => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
+  let dev = night.emojis.find(r => r.id === '491840323534848001');
+  let website = night.emojis.find(r => r.id === '491840323534848001');
+  let avatar = night.emojis.find(r => r.id === '491840323534848001');
+  let discord = night.emojis.find(r => r.id === '491840323534848001');
+  let servers = night.emojis.find(r => r.id === '491840323534848001');
+  let users = night.emojis.find(r => r.id === '491840323534848001');
+  let channels = night.emojis.find(r => r.id === '491840323534848001');
+  let commands = night.emojis.find(r => r.id === '491840323534848001');
+  let greentick = night.emojis.find(r => r.id === '491840323534848001');
+  let redtick = night.emojis.find(r => r.id === '491840323534848001');
+  let upgrading = night.emojis.find(r => r.id === '491840323534848001');
+  let editing = night.emojis.find(r => r.id === '491840323534848001');
   let mention = message.mentions.users.first() || message.author;
   let args = message.content.split(' ');
   let author = message.author;
   if(args[0] === `${prefix}` && !args[1]) {
-    let dev = night.emojis.find(r => r.name === 'Developer');
-    let website = night.emojis.find(r => r.name === 'Website');
-    let avatar = night.emojis.find(r => r.name === 'Avatar');
-    let discord = night.emojis.find(r => r.name === 'Discord');
-
-    let servers = night.emojis.find(r => r.name === 'Servers');
-    let users = night.emojis.find(r => r.name === 'Users');
-    let channels = night.emojis.find(r => r.name === 'Channels');
-    let commands = night.emojis.find(r => r.name === 'Commands');
 
     let embed = new Discord.RichEmbed()
     .setTitle(`**${night.user.username}** is a **multifunction** bot which helps you to **moderate** and **have some fun** in your server`)
@@ -34,6 +37,8 @@ night.on('message',async (message) => {
     .setFooter(`${night.users.find(owner => owner.id === '475396751549792277').tag}`, night.users.find(owner => owner.id === '475396751549792277').avatarURL);
 
     message.channel.send(embed);
+  } else if(args[0] === `${prefix}id`) {
+    
   }
 });
 
