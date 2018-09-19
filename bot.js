@@ -29,7 +29,7 @@ night.on('message',async (message) => {
 
     let embed = new Discord.RichEmbed()
     .setTitle(` \`نايت بوت\`. هو بوت يساعدك على ادارة سيرفرك`)
-    .addField('Info:', `${dev} **Developer:** \`xYouseeF'₁₁ || Roýale.#0001\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`xYouseeF'₁₁ || Roýale.#0001\`` ,true)
+    .addField('Info:', `${dev} **Developer:** \`xYouseeF'₁₁ || Roýale.#0001\`\n${website} **Website: [Github](https://github.com/xLeRaz)**\n${discord} **Official Server: [discord.gg/hPYywCR](https://discord.gg/hPYywCR)**\n${avatar} **Avatar:** Made by \`${hero.users.find(owner => owner.id === '475396751549792277').tag}\`` ,true)
     .addField('Stats:', `${servers} **Servers:** \`${night.guilds.size}\`\n${users} **Users:** \`${night.users.size}\`\n${channels} **Channels:** \`${night.channels.size}\`\n${commands} **Commands:** \`4\`` ,true)
     .setFooter('Made By: xYouseeF\'₁₁ || Roýale.#0001');
 
