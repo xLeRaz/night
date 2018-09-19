@@ -1,4 +1,4 @@
-find(const dateFormat = require('date-format');
+const dateFormat = require('date-format');
 const Discord = require('discord.js');
 const moment = require('moment');
 const ms = require('ms');
