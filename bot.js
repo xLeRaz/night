@@ -1,3 +1,9 @@
+const dateFormat = require('date-format');
+const Discord = require('discord.js');
+const ms = require('ms');
+const fs = require('fs');
+const night = new Discord.Client({disableEveryone: true, maxMessagesCache: 1});
+
 night.on('message',async (message) => {
   if(message.author.bot) return;
   if(message.channel.type === 'dm') return;
@@ -55,3 +61,5 @@ night.on('message',async (message) => {
   });
 }
 });
+
+night.login(process.env.NIGHT);
