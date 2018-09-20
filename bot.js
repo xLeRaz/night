@@ -2,6 +2,7 @@ const dateFormat = require('date-format');
 const Discord = require('discord.js');
 const ms = require('ms');
 const fs = require('fs');
+const prefix = '!';
 const night = new Discord.Client({disableEveryone: true, maxMessagesCache: 1});
 
 night.on('message',async (message) => {
