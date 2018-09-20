@@ -52,7 +52,7 @@ night.on('message',async (message) => {
   let role = message.guild.roles.find(r => r.name === args.slice(1).join(' ')) || message.mentions.roles.first();
   if(!role) return message.channel.send('- هذه الرتبة غير موجودة');
   let m = await message.channel.send('- أكتب اسم الرتبة الجديدة الان');
-  let awaitng = await message.channel.awaitMessages(r => r.author.id == message.author.id, {time: 30000, errors: ['time']}).then(c => {
+  let awaitng = await message.channel.awaitMessages(r => r.author.id == message.author.id, {max: 1, time: 30000, errors: ['time']}).then(c => {
     let name = c.first().content;
     role.edit({
       name: name
